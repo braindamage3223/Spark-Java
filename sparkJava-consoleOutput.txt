@@ -1,0 +1,273 @@
+Task 1:
+
+root
+ |-- userId: integer (nullable = true)
+ |-- movieId: integer (nullable = true)
+ |-- rating: double (nullable = true)
+ |-- timestamp: integer (nullable = true)
+
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+
+Task 2:
++-------+-------------------------------------------------+
+|movieId|result                                           |
++-------+-------------------------------------------------+
+|1      |[Adventure, Animation, Children, Comedy, Fantasy]|
+|2      |[Adventure, Children, Fantasy]                   |
+|3      |[Comedy, Romance]                                |
+|4      |[Comedy, Drama, Romance]                         |
+|5      |[Comedy]                                         |
+|6      |[Action, Crime, Thriller]                        |
+|7      |[Comedy, Romance]                                |
+|8      |[Adventure, Children]                            |
+|9      |[Action]                                         |
+|10     |[Action, Adventure, Thriller]                    |
+|11     |[Comedy, Drama, Romance]                         |
+|12     |[Comedy, Horror]                                 |
+|13     |[Adventure, Animation, Children]                 |
+|14     |[Drama]                                          |
+|15     |[Action, Adventure, Romance]                     |
+|16     |[Crime, Drama]                                   |
+|17     |[Drama, Romance]                                 |
+|18     |[Comedy]                                         |
+|19     |[Comedy]                                         |
+|20     |[Action, Comedy, Crime, Drama, Thriller]         |
+|21     |[Comedy, Crime, Thriller]                        |
+|22     |[Crime, Drama, Horror, Mystery, Thriller]        |
+|23     |[Action, Crime, Thriller]                        |
+|24     |[Drama, Sci-Fi]                                  |
+|25     |[Drama, Romance]                                 |
+|26     |[Drama]                                          |
+|27     |[Children, Drama]                                |
+|28     |[Drama, Romance]                                 |
+|29     |[Adventure, Drama, Fantasy, Mystery, Sci-Fi]     |
+|30     |[Crime, Drama]                                   |
+|31     |[Drama]                                          |
+|32     |[Mystery, Sci-Fi, Thriller]                      |
+|33     |[Adventure, Romance, IMAX]                       |
+|34     |[Children, Drama]                                |
+|35     |[Drama, Romance]                                 |
+|36     |[Crime, Drama]                                   |
+|37     |[Documentary, IMAX]                              |
+|38     |[Children, Comedy]                               |
+|39     |[Comedy, Romance]                                |
+|40     |[Drama]                                          |
+|41     |[Drama, War]                                     |
+|42     |[Action, Crime, Drama]                           |
+|43     |[Drama]                                          |
+|44     |[Action, Adventure, Fantasy]                     |
+|45     |[Comedy, Drama, Thriller]                        |
+|46     |[Drama, Romance]                                 |
+|47     |[Mystery, Thriller]                              |
+|48     |[Animation, Children, Drama, Musical, Romance]   |
+|49     |[Drama, Romance]                                 |
+|50     |[Crime, Mystery, Thriller]                       |
++-------+-------------------------------------------------+
+only showing top 50 rows
+
+root
+ |-- movieId: integer (nullable = true)
+ |-- result: array (nullable = true)
+ |    |-- element: string (containsNull = true)
+
++-------+---------+
+|movieId|genres   |
++-------+---------+
+|1      |Adventure|
+|1      |Animation|
+|1      |Children |
+|1      |Comedy   |
+|1      |Fantasy  |
+|2      |Adventure|
+|2      |Children |
+|2      |Fantasy  |
+|3      |Comedy   |
+|3      |Romance  |
+|4      |Comedy   |
+|4      |Drama    |
+|4      |Romance  |
+|5      |Comedy   |
+|6      |Action   |
+|6      |Crime    |
+|6      |Thriller |
+|7      |Comedy   |
+|7      |Romance  |
+|8      |Adventure|
+|8      |Children |
+|9      |Action   |
+|10     |Action   |
+|10     |Adventure|
+|10     |Thriller |
+|11     |Comedy   |
+|11     |Drama    |
+|11     |Romance  |
+|12     |Comedy   |
+|12     |Horror   |
+|13     |Adventure|
+|13     |Animation|
+|13     |Children |
+|14     |Drama    |
+|15     |Action   |
+|15     |Adventure|
+|15     |Romance  |
+|16     |Crime    |
+|16     |Drama    |
+|17     |Drama    |
+|17     |Romance  |
+|18     |Comedy   |
+|19     |Comedy   |
+|20     |Action   |
+|20     |Comedy   |
+|20     |Crime    |
+|20     |Drama    |
+|20     |Thriller |
+|21     |Comedy   |
+|21     |Crime    |
+|21     |Thriller |
+|22     |Crime    |
+|22     |Drama    |
+|22     |Horror   |
+|22     |Mystery  |
+|22     |Thriller |
+|23     |Action   |
+|23     |Crime    |
+|23     |Thriller |
+|24     |Drama    |
++-------+---------+
+only showing top 60 rows
+
+Task 3:
+
++-------+------------------+
+|movieId|             genre|
++-------+------------------+
+| 176279|(no genres listed)|
+| 176275|(no genres listed)|
+| 176273|            Action|
+| 176273|             Drama|
+| 176273|          Thriller|
+| 176271|             Drama|
+| 176269|             Drama|
+| 176269|          Children|
+| 176267|             Drama|
+| 176267|           Romance|
+| 176267|            Action|
+| 176263|            Sci-Fi|
+| 176259|            Horror|
+| 176257|            Horror|
+| 176257|           Mystery|
+| 176255|           Mystery|
+| 176255|          Thriller|
+| 176255|            Horror|
+| 176253|(no genres listed)|
+| 176251|            Comedy|
+| 176251|             Drama|
+| 176249|             Crime|
+| 176249|          Thriller|
+| 176249|             Drama|
+| 176245|       Documentary|
+| 176239|           Fantasy|
+| 176239|            Comedy|
+| 176237|           Fantasy|
+| 176237|          Thriller|
+| 176237|            Action|
+| 176235|         Animation|
+| 176235|          Children|
+| 176233|(no genres listed)|
+| 176231|(no genres listed)|
+| 176229|           Fantasy|
+| 176229|            Comedy|
+| 176227|           Fantasy|
+| 176227|            Comedy|
+| 176225|           Fantasy|
+| 176223|            Sci-Fi|
+| 176223|           Fantasy|
+| 176223|            Comedy|
+| 176221|(no genres listed)|
+| 176219|            Comedy|
+| 176217|          Children|
+| 176217|             Drama|
+| 176215|             Drama|
+| 176215|           Fantasy|
+| 176215|            Horror|
+| 176213|             Drama|
++-------+------------------+
+only showing top 50 rows
+
+root
+ |-- movieId: integer (nullable = true)
+ |-- genre: string (nullable = true)
+
+Task 4:
+
++-----------+-----+
+|      genre|count|
++-----------+-----+
+|      Drama|19806|
+|     Comedy|13002|
+|   Thriller| 6761|
+|    Romance| 6069|
+|     Action| 5775|
+|     Horror| 4448|
+|      Crime| 4247|
+|Documentary| 4122|
+|  Adventure| 3369|
+|     Sci-Fi| 2847|
++-----------+-----+
+only showing top 10 rows
+
+Task 5: 
+
++-------+-----+------+
+|movieId|genre|userId|
++-------+-----+------+
+|176273 |Drama|45811 |
+|176189 |Drama|45811 |
+|176271 |Drama|45811 |
+|176269 |Drama|45811 |
+|176267 |Drama|45811 |
+|176251 |Drama|45811 |
+|176249 |Drama|45811 |
+|176217 |Drama|45811 |
+|176215 |Drama|45811 |
+|176213 |Drama|45811 |
++-------+-----+------+
+
+Task 6: 
+
++------+------------+----------------+
+|userId|ratingsCount|mostCommonGenres|
++------+------------+----------------+
+|45811 |18276       |Drama           |
+|8659  |9279        |Drama           |
+|270123|7638        |Drama           |
+|179792|7515        |Drama           |
+|228291|7410        |Drama           |
+|243443|6320        |Comedy          |
+|98415 |6094        |Drama           |
+|229879|6024        |Drama           |
+|98787 |5814        |Drama           |
+|172224|5701        |Drama           |
++------+------------+----------------+
+only showing top 10 rows
+
+Task 7
+
++-------+-----------+----------------+
+|movieId|avg(rating)|var_samp(rating)|
++-------+-----------+----------------+
+| 164849|        5.0|             NaN|
+| 122701|        5.0|             NaN|
+| 151367|        5.0|             NaN|
+| 174655|        5.0|             NaN|
+| 141297|        5.0|             NaN|
+| 137018|        5.0|             NaN|
+| 132912|        5.0|             NaN|
+| 130544|        5.0|             NaN|
+| 164278|        5.0|             NaN|
+| 167666|        5.0|             NaN|
++-------+-----------+----------------+
+only showing top 10 rows
